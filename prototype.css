@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap');
+
+body { 
+    font-family: 'Inter', 'Prompt', sans-serif; 
+    background-color: #e5e5e5; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+}
+
+.device { 
+    width: 375px; 
+    height: 812px; 
+    background: #ffffff; 
+    border: 10px solid #000000; 
+    border-radius: 40px; 
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3); 
+    position: relative; 
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column; 
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.notch { 
+    position: absolute; 
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 120px; 
+    height: 25px; 
+    background: #000000; 
+    border-bottom-left-radius: 16px; 
+    border-bottom-right-radius: 16px; 
+    z-index: 50; 
+}
+
+.header-minimal {
+    padding: 2.5rem 1rem 1rem 1rem;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    color: #111;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    z-index: 45;
+}
+
+.content { 
+    flex-grow: 1; 
+    overflow-y: auto; 
+    padding: 20px; 
+    padding-bottom: 90px; 
+    background-color: #f9f9f9; 
+}
+
+.bottom-nav { 
+    position: absolute; 
+    bottom: 0; 
+    width: 100%; 
+    height: 75px; 
+    background: #ffffff; 
+    box-shadow: 0 -10px 25px rgba(0,0,0,0.04);
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    padding-bottom: 15px; 
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    z-index: 40; 
+}
+
+.nav-item { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    color: #c0c0c0; 
+    font-size: 0.65rem; 
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    width: 25%; 
+    padding-top: 5px;
+}
+
+.nav-item.active { 
+    color: #000000; 
+    font-weight: 700; 
+    transform: translateY(-2px);
+}
+
+.nav-item i { 
+    font-size: 1.35rem; 
+    margin-bottom: 4px; 
+}
+
+.status-badge { 
+    padding: 6px 12px; 
+    font-size: 0.6rem; 
+    font-weight: 700; 
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 9999px; /* Pill shape */
+}
+
+.status-pending { 
+    background: #f3f4f6; 
+    color: #4b5563; 
+}
+
+.status-progress { 
+    background: #000; 
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.status-completed { 
+    background: #ecfdf5; 
+    color: #059669; 
+}
+
+/* Modern App Form Elements */
+.input-minimal {
+    width: 100%;
+    border: none;
+    background: #f3f4f6;
+    padding: 14px 16px;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.9rem;
+    border-radius: 16px;
+    transition: all 0.2s ease;
+    color: #111;
+}
+.input-minimal:focus {
+    background: #e5e7eb;
+    box-shadow: 0 0 0 2px #000;
+}
+.textarea-minimal {
+    width: 100%;
+    border: none;
+    background: #f3f4f6;
+    padding: 14px 16px;
+    outline: none;
+    font-family: inherit;
+    height: 120px;
+    resize: none;
+    font-size: 0.9rem;
+    border-radius: 16px;
+    transition: all 0.2s ease;
+    color: #111;
+}
+.textarea-minimal:focus {
+    background: #e5e7eb;
+    box-shadow: 0 0 0 2px #000;
+}
+.btn-minimal {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    font-weight: 700;
+    padding: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    border-radius: 20px; /* Highly rounded app buttons */
+    transition: transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.btn-minimal:hover, .btn-minimal:active {
+    background: #333;
+    transform: scale(0.98);
+}
+.card-minimal {
+    border: none;
+    padding: 20px;
+    margin-bottom: 16px;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+    overflow: hidden;
+}
